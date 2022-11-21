@@ -46,7 +46,10 @@ const AboutMe = ({ Me }) => {
               className="wow flipInX btn button primary-button text-uppercase"
               data-wow-delay="3s"
               onClick={() =>
-                window.open(require("../../CV/RomeoMarquez_2022.pdf"), "_none")
+                window.open(
+                  require("../../CV/CV_RomeoMarquez_2022.pdf"),
+                  "_none"
+                )
               }
             >
               Download CV <i className="fas fa-cloud-download-alt"></i>
