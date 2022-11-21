@@ -126,6 +126,7 @@ a:visited {
   min-height: 100vh;
   background: #ffffff;
   box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  min-height: 100vh;
 }
 .main .about-area .about-image {
   height: 50vh;
@@ -169,7 +170,6 @@ a:visited {
   content: "";
   z-index: -1;
 }
-/*skills*/
 .octo,
 .octo div {
   margin: 0 auto;
@@ -189,11 +189,13 @@ a:visited {
 .octo1 {
   transform: rotate(-45deg);
 }
+
 /* Services Area */
 .main .services-area {
   padding: 5rem 2rem;
   background: #ffffff;
   box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  min-height: 100vh;
 }
 
 .main .services-area .services-title {
@@ -253,16 +255,12 @@ a:visited {
   filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
 /* End Project Area */
-/*Contact Me*/
-
-.main .about-area {
+.main .contact-area {
+  padding: 2rem 4rem;
+  min-height: 100vh;
   background: #ffffff;
   box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-}
-.main .about-area .card {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  margin: 0 auto;
+  min-height: 100vh;
 }
 footer {
   background-color: black;

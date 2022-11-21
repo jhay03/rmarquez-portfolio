@@ -38,7 +38,7 @@ const Portfolio = () => {
         <section className="services-area" id="section-4">
           <Skills fe={fe} be={be} fs={fs} db={db} />
         </section>
-        <section className="about-area" id="section-5">
+        <section className="contact-area" id="section-5">
           <Contact message={message} />
         </section>
       </div>
