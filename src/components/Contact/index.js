@@ -23,7 +23,7 @@ const Contact = ({ message }) => {
                   <img
                     src={message}
                     alt="Get In Touch"
-                    className="mt-5 ml-5 wow fadeInUp"
+                    className="mt-5 ml-5 wow fadeInUp responsive"
                     data-wow-delay="2s"
                   />
                 </div>

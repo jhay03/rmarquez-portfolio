@@ -5,6 +5,7 @@ import capstone1 from "../../images/projects/capstone1.png";
 import capstone2 from "../../images/projects/capstone2.png";
 import capstone3 from "../../images/projects/capstone3.jpg";
 import capstone4 from "../../images/projects/pareserve.JPG";
+import capstone5 from "../../images/projects/RAM_Clothing.png";
 import fe from "../../images/services/frontend.jpeg";
 import be from "../../images/services/backend.jpeg";
 import fs from "../../images/services/fullstack.jpeg";
@@ -33,6 +34,7 @@ const Portfolio = () => {
             img_2={capstone2}
             img_3={capstone3}
             img_4={capstone4}
+            img_5={capstone5}
           />
         </section>
         <section className="services-area" id="section-4">

@@ -1,6 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Projects = ({ img_1, img_2, img_3, img_4 }) => {
+const Projects = ({ img_1, img_2, img_3, img_4, img_5 }) => {
+  const projectsDetails = [
+    {
+      image: img_1,
+      link: "https://jhay03.gitlab.io/b49_capstone1/",
+      title: "Auto-Care",
+      type: "Static-Website",
+      label: "capstone-1",
+      service: "Service-1",
+    },
+    {
+      image: img_2,
+      link: "https://fast-hamlet-89907.herokuapp.com/",
+      title: "Book-on-the-Go",
+      type: "Dynamic-Website",
+      label: "capstone-2",
+      service: "Service-2",
+    },
+    {
+      image: img_3,
+      link: "https://ramresort.netlify.app/",
+      title: "RAM Resort",
+      type: "MERN Stack",
+      label: "capstone-3",
+      service: "Service-3",
+    },
+    {
+      image: img_4,
+      link: "http://pareserve.herokuapp.com/",
+      title: "Pares-Serve",
+      type: "E-commerce ( PHP LARAVEL)",
+      label: "capstone-4",
+      service: "Service-4",
+    },
+    {
+      image: img_5,
+      link: "https://ram-clothing.netlify.app/",
+      title: "RAM-Clothing",
+      type: "E-commerce ( ReactJS with Firebase)",
+      label: "capstone-5",
+      service: "Service-5",
+    },
+  ];
+
   return (
     <div className="container">
       <div className="project-tilte pb-5">
@@ -11,89 +55,32 @@ const Projects = ({ img_1, img_2, img_3, img_4 }) => {
           My Projects
         </h1>
       </div>
-      <div className="button-group">
-        {/*<button type="button" className="active" id="btn1">All</button>
-                       <button type="button" data-filter=".capstone1">Capstone-1</button>
-                      <button type="button" data-filter=".capstone2">Capstone-2</button>
-                      <button type="button" data-filter=".capstone3">Capstone-3</button>
-                      <button type="button" data-filter=".upcoming">Upcoming</button> */}
-      </div>
+
       <div className="row grid text-white">
-        <div className="col-lg-4 col-md-6 col-sm-12 element-item capstone1">
-          <div className="our-project wow zoomInUp" data-wow-delay="2s">
-            <div className=" img">
-              <a
-                className="test-popup-link"
-                href="https://jhay03.gitlab.io/b49_capstone1/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={img_1} alt="Services-1" />
-              </a>
+        {projectsDetails.map(({ image, link, title, type, label, service }) => {
+          return (
+            <div
+              className={`col-lg-4 col-md-6 col-sm-12 element-item ${label}`}
+            >
+              <div className="our-project wow zoomInUp" data-wow-delay="2s">
+                <div className="img">
+                  <a
+                    className="test-popup-link"
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={image} alt={service} />
+                  </a>
+                </div>
+                <div className="title py-4 text-center text-white">
+                  <h4 className="text-uppercase">{title}</h4>
+                  <span>{type}</span>
+                </div>
+              </div>
             </div>
-            <div className="title py-4 text-center text-white">
-              <h4 className="text-uppercase">Auto-Care</h4>
-              <span>Static Website</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-lg-4 col-md-6 col-sm-12 element-item capstone2">
-          <div className="wow zoomInUp our-project" data-wow-delay="2s">
-            <div className=" img">
-              <a
-                className="test-popup-link"
-                href="https://fast-hamlet-89907.herokuapp.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={img_2} alt="portfolio-2" />
-              </a>
-            </div>
-            <div className="title py-4 text-center text-white">
-              <h4 className="text-uppercase">Book on the Go</h4>
-              <span>Dynamic Website</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-lg-4 col-md-6 col-sm-12 element-item capstone3">
-          <div className="wow zoomInUp our-project" data-wow-delay="2s">
-            <div className="img">
-              <a
-                className="test-popup-link"
-                href="https://ramresort.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={img_3} alt="portfolio-3" />
-              </a>
-            </div>
-            <div className="title py-4 text-center text-white">
-              <h4 className="text-uppercase">RAM Resort</h4>
-              <span>Full-stack Website</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-lg-4 col-md-6 col-sm-12 element-item pareserve">
-          <div className="wow zoomInUp our-project" data-wow-delay="2s">
-            <div className=" img">
-              <a
-                className="test-popup-link"
-                href="http://pareserve.herokuapp.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={img_4} alt="pareserve" />
-              </a>
-            </div>
-            <div className="title py-4 text-center text-white">
-              <h4 className="text-uppercase">PARES-ERVE</h4>
-              <span>E-commerce</span>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
